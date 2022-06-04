@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default class Navbar extends Component {
-
-  render() {
+const Navbar = () =>{
     return (
-      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#e3f2fd" }}>
+      <nav className="navbar fixed-top navbar-expand-lg" style={{ backgroundColor: "#e3f2fd" }}>
         <div className="container-fluid">
           {/* <Link className="navbar-brand" to="/">News Monkey</Link> */}
           <img title='News Monkey' src="./app-logo.png" style={{width: '50px'}} alt="News Monkey" />
@@ -25,10 +23,10 @@ export default class Navbar extends Component {
               <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
             </ul>
-
           </div>
         </div>
       </nav>
     )
-  }
 }
+
+export default Navbar
